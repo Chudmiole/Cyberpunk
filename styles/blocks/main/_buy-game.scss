@@ -1,0 +1,99 @@
+.buy-game {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  background-color: var(--color-dark);
+  color: var(--color-light);
+
+  @include tablet {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__info {
+    padding: 70px 32px;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+
+    @include mobile {
+      padding: 40px 12px 70px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    vertical-align: middle;
+    row-gap: 15px;
+  }
+
+  &__item {
+    &--title {
+      color:var(--color-blue);
+      font-weight: 700;
+    }
+
+    &--disk {
+      margin-left: 42px;
+      position: relative;
+
+      &::before {
+        @include square(32px);
+
+        content: '';
+        position: absolute;
+        top: -3px;
+        left: -42px;
+        background: url('/D:/Work/FrontEnd/Cyberpunk/images/icons/disk.svg') center/contain no-repeat;
+      }
+    }
+
+    &--wysiwyg {
+      margin-left: 42px;
+      position: relative;
+
+      &::before {
+        @include square(32px);
+
+        content: '';
+        position: absolute;
+        top: -3px;
+        left: -42px;
+        background: url('/D:/Work/FrontEnd/Cyberpunk/images/icons/wysiwyg.svg') center/contain no-repeat;
+      }
+    }
+
+    &--collections {
+      margin-left: 42px;
+      position: relative;
+
+      &::before {
+        @include square(32px);
+
+        content: '';
+        position: absolute;
+        top: -3px;
+        left: -42px;
+        background: url('/D:/Work/FrontEnd/Cyberpunk/images/icons/collections.svg') center/contain no-repeat;
+      }
+    }
+  }
+
+  &__disk-image {
+    background-image: url('/D:/Work/FrontEnd/Cyberpunk/images/buyGame/disk-image.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include mobile {
+      width: 100vw;
+      aspect-ratio: 8 / 5;
+    }
+  }
+}

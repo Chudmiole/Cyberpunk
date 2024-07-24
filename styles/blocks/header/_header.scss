@@ -1,0 +1,80 @@
+.header {
+  padding-inline: auto;
+  width: 100%;
+  padding-top: 20px;
+  position: relative;
+  z-index: 1;
+  background: url('/D:/Work/FrontEnd/Cyberpunk/images/header-bg-2.jpg') center/cover no-repeat;
+
+  &::before,
+  &::after {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &::before {
+    content: '';
+    background: url('/D:/Work/FrontEnd/Cyberpunk/images/header-bg-1.jpg') center/cover no-repeat;
+    z-index: 3;
+    animation: bgSwap1 90s ease 0s infinite normal;
+  
+    @keyframes bgSwap1 {
+      0%, 29% { opacity: 1; }
+      33% { opacity: 0; }
+      96% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+  }
+
+  &::after {
+    content: '';
+    background: url('/D:/Work/FrontEnd/Cyberpunk/images/header-bg-3.jpg') center/cover no-repeat;
+    z-index: 2;
+    animation: bgSwap2 90s ease 0s infinite normal;
+  
+    @keyframes bgSwap2 {
+      0%, 66% { opacity: 0; }
+      70% { opacity: 1; }
+    }
+  }
+
+  &__inner {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 537px;
+
+    @include mobile {
+      row-gap: 451px;
+    }
+  }
+
+  &__title {
+    z-index: 4;
+
+    display: flex;
+    justify-content: space-between;
+
+    @include mobile {
+      flex-direction: column;
+      row-gap: 10px;
+      align-items: center;
+    }
+  }
+
+  &__body {
+    width: 100%;
+    z-index: 4;
+
+    display: flex;
+    justify-content: end;
+
+    @include mobile {
+      justify-content: center;
+    }
+  }
+}

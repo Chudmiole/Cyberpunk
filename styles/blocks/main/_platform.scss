@@ -1,0 +1,46 @@
+.platform {
+  padding-top: 45px;
+  width: 320px;
+
+  @include mobile-s {
+    width: 296px;
+  }
+
+  &__title {
+    font-weight: 700;
+    color: var(--color-blue);
+    margin-bottom: 25px;
+  }
+
+  &__icons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 50px;
+
+    @include mobile {
+      row-gap: 40px;
+    }
+  }
+
+  &__icon {
+    &--pc {
+      width: 62px;
+      height: 35px;
+    }
+
+    &--xboxOne {
+      width: 178px;
+      height: 35px;
+    }
+
+    &--stadia {
+      width: 58px;
+      height: 50px;
+    }
+
+    &--ps4 {
+      width: 168px;
+      height: 35px;
+    }
+  }
+}

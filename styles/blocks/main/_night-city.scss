@@ -1,0 +1,81 @@
+.night-city {
+  padding-block: 70px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 70px;
+
+  @include tablet {
+    padding-inline: 36px;
+  }
+
+  @include tablet {
+    padding-inline: 0;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+
+    @include mobile {
+      margin-inline: 12px;
+    }
+  }
+
+  &__description {
+    width: clamp(296px, 77vw, 952px);
+    color: var(--color-gray);
+  }
+
+  &__images {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: 35.94% 61.56%;
+    grid-template-rows: repeat(2, 196px);
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 196px 424px;
+    }
+
+    @include mobile {
+      gap: 32px 0;
+      grid-template-columns: 100vw;
+      grid-template-rows: 1fr 1fr 424px;
+    }
+  }
+
+  &__image1, 
+  &__image2, 
+  &__image3 {
+    @include polygon;
+  }
+
+  &__image1, 
+  &__image2 {
+    @include tablet {
+      width: 100%;
+    }
+  }
+
+  &__image3 {
+    order: 2;
+
+    @include tablet {
+      order: 3;
+      grid-column: 1 / -1;
+    }
+  }
+
+  &__image2 {
+    order: 3;
+
+    @include tablet {
+      order: 2;
+    }
+  }
+
+  &__image1 {
+    order: 1;
+  }
+}

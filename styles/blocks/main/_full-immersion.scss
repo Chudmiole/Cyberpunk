@@ -1,0 +1,130 @@
+.full-immersion {
+  background-color: var(--color-yellow);
+  padding-block: 70px;
+
+  @include mobile-s {
+    padding-inline: 12px;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px 32px;
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      gap: 25px 0;
+    }
+  }
+
+  &__image {
+    background: url('D:/Work/FrontEnd/Cyberpunk/images/FULLImmersion/monitor.png') center/contain no-repeat;
+
+    grid-row: 1 / 4;
+    grid-column: 1 / 2;
+
+    @include desktop {
+      grid-row: 1 / 3;
+    }
+
+    @include tablet {
+      grid-row: 1 / 2;
+    }
+
+    @include mobile {
+      width: clamp(296px, 90vw, 743px);
+      aspect-ratio: 100 / 69;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+
+    grid-row: 4 / 5;
+    grid-column: 1 / 2;
+
+    padding-bottom: 25px;
+
+    @include desktop {
+      grid-row: 3 / 5;
+
+      flex-direction: column;
+      justify-content: start;
+    }
+
+    @include tablet {
+      grid-row: 2 / 5;
+    }
+
+    @include mobile {
+      flex-direction: row;
+      justify-content: center;
+      gap: 15px;
+    }
+  }
+
+  &__icon {
+
+    &--hp {
+      background: url('/D:/Work/FrontEnd/Cyberpunk/images/icons/hp-2Logo.svg') center/contain no-repeat;
+      width: clamp(44px, 10.43vw, 80px);
+      aspect-ratio: 1;
+    }
+
+    &--cross {
+      background: url('/D:/Work/FrontEnd/Cyberpunk/images/icons/cross.svg') center/contain no-repeat;
+      width: clamp(50px, 11.73vw, 90px);
+      aspect-ratio: 90 / 19;
+    }
+
+    &--cyberpunkLogo {
+      background: url('/D:/Work/FrontEnd/Cyberpunk/images/cyberpunkLogo.png') center/contain no-repeat;
+      width: clamp(176px, 41.72vw, 320px);
+      aspect-ratio: 4 / 1;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+  }
+
+  &__item {
+    position: relative;
+
+    &::before {
+      @include square(32px);
+
+      content: '';
+      position: absolute;
+      top: -3px;
+      left: -42px;
+    }
+
+    &--first {
+      margin-left: 42px;
+
+      &::before {
+      background: url('D:/Work/FrontEnd/Cyberpunk/images/icons/colorLens.svg') center/cover no-repeat;}
+    }
+
+    &--second {
+      margin-left: 42px;
+
+      &::before {
+      background: url('D:/Work/FrontEnd/Cyberpunk/images/icons/awesome.svg') center/cover no-repeat;}
+    }
+
+    &--third {
+      margin-left: 42px;
+
+      &::before {
+      background: url('D:/Work/FrontEnd/Cyberpunk/images/icons/motion.svg') center/cover no-repeat;}
+    }
+  }
+}

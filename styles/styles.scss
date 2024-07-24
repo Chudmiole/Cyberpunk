@@ -1,0 +1,22 @@
+@import
+  'lead-up/fonts',
+  'lead-up/normalize',
+  'lead-up/mixins',
+  'lead-up/media',
+  'lead-up/variables',  
+  'lead-up/utils', 
+  'lead-up/globals';
+
+@import
+  'blocks/header/header',
+  'blocks/header/soc1als',
+  'blocks/header/cyberpunk-info',
+  'blocks/main/night-city',
+  'blocks/main/bg-divider',
+  'blocks/main/promo',
+  'blocks/main/participant-info',
+  'blocks/main/field',
+  'blocks/main/full-immersion',
+  'blocks/main/buy-game',
+  'blocks/main/platform', 
+  'blocks/footer/footer';

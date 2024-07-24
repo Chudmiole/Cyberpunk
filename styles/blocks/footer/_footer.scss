@@ -1,0 +1,84 @@
+.footer {
+  background-color: var(--color-light);
+  width: 100%;
+  height: auto;
+
+  @include mobile {
+    height: auto;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__logotypes {
+    display: flex;
+    align-items: center;
+    column-gap: 32px;
+
+    @include tablet {
+      flex-direction: column;
+      column-gap: 0;
+      row-gap: 25px;
+
+      padding: 40px 60px 25px;
+    }
+  }
+
+  &__copyrights {
+    @include hover;
+
+    display: flex;
+    column-gap: 32px;
+    justify-content: end;
+    align-items: center;
+
+    @include tablet {
+      width: 100%;
+      padding: 25px 39px;
+
+      flex-direction: column;
+      column-gap: 0;
+      row-gap: 15px;
+      justify-content: center;
+    }
+
+    @include mobile-s {
+      background-color: var(--color-gray-alt);
+    }
+
+    & p {
+      margin: 0;
+
+      &:hover {
+        color: var(--color-blue);
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__extra {
+    @include hover;
+
+    &:hover {
+      color: var(--color-blue);
+      text-decoration: underline;
+    }
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    padding-block: 13px;
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,13 @@
+.bg-divider {
+  &--first {
+    background: url('D:/Work/FrontEnd/Cyberpunk/images/nightCity/bgDividerWhiteBlack.png') center/cover repeat-x;
+    width: 100%;
+    height: 70px;
+  }
+
+  &--second {
+    background: url('D:/Work/FrontEnd/Cyberpunk/images/promo/bg-dividerBlackYellow.jpg') center/cover repeat-x;
+    width: 100%;
+    height: 70px;
+  }
+}

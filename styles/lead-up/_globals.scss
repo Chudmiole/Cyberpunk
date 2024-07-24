@@ -1,0 +1,93 @@
+body {
+  @include fluid-text(18, 16);
+
+  @include tablet-above {
+    font-size: 18px;
+  }
+
+  font-family: var(--font-family-base);
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--color-dark);
+  background-color: var(--color-light);
+}
+
+a, button, textarea, input, svg {
+  transition-duration: var(--transition-duration);
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-blue);
+  font-weight: 700;
+}
+
+h1, h2, h3 {
+  font-family: 'Archangelsk', sans-serif;
+  font-weight: 400;
+}
+
+h1, .h1 {
+  font-size: 62px;
+  line-height: 1;
+}
+
+h2, .h2 {
+  font-size: 62px;
+  line-height: 1;
+
+  @include mobile {
+    @include fluid-text(62, 30);
+  }
+}
+
+h3, .h3 {
+  font-size: 24px;
+  line-height: 1;
+
+  @include mobile {
+    @include fluid-text(24, 20);
+  }
+}
+
+.logo {
+  @include mobile-s {
+    width: 200px;
+    height: 50px;
+  }
+
+  &--cd-project {
+    @include mobile-s {
+      width: 116px;
+      height: 50px;
+    }
+  }
+}
+
+.button {
+  @include reset-button;
+  @include flex-center;
+
+  box-sizing: border-box;
+  width: 190px;
+  height: 60px;
+  color: var(--color-dark);
+  background-color: var(--color-yellow);
+  border: 1px solid var(--color-yellow);
+  font-weight: 700;
+
+  &--alternate {
+    color: var(--color-yellow);
+    background-color: var(--color-dark);
+    border: 1px solid var(--color-dark);
+  }
+
+  @include mobile {
+    width: 180px;
+  }
+
+  @include hover {
+    border-color: var(--color-blue);
+    color: var(--color-blue);
+  }
+}

@@ -1,0 +1,35 @@
+.soc1als {
+  &__list {
+    display: flex;
+    column-gap: 22px;
+    align-items: center;
+
+    @include mobile {
+      column-gap: 17px;
+    }
+  }
+
+  &__item {
+    @include square(45px);
+    @include flex-center;
+
+    @include mobile {
+      @include square(35px);
+    }
+
+    @include hover {
+      background-color: var(--color-blue);
+      border-radius: 50%;
+      transition-duration: var(--transition-duration);
+    }
+  }
+
+  &__link {
+    & img {
+      @include mobile {
+        width: 25px;
+        height: 25px;
+      }
+    }  
+  }
+}

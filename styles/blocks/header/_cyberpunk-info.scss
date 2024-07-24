@@ -1,0 +1,45 @@
+.cyberpunk-info {
+    width: clamp(320px, 100vw, 625px);
+    height: auto;
+    background-color: var(--color-yellow);
+    padding: 70px;
+
+    @include mobile {
+      padding: 30px 38px;
+    }
+
+    @include polygon;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+
+    @include mobile {
+      align-items: center;
+    }
+
+  &__title {
+    @include mobile {
+      text-align: center;
+    }
+  }
+
+  &__button {
+    @include reset-button;
+    @include flex-center;
+
+    width: 272px;
+    height: 79px;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-yellow);
+    background-color: var(--color-dark);
+    box-sizing: border-box;
+    border: 1px solid var(--color-dark);
+
+    @include hover {
+      color: var(--color-blue);
+      border-color: var(--color-blue);
+    }
+  }
+}
